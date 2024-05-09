@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
+import NavBar from "../components/NavBar";
 
 function SignUp() {
   const signup = useOutletContext();
@@ -62,6 +63,10 @@ function SignUp() {
       });
   }
   return (
+    <>
+    <header>
+      <NavBar />
+    </header>
     <form className="card" onSubmit={handleSignUp}>
       <div className="card-header-signup">
         <span>Sign Up</span>
@@ -122,6 +127,7 @@ function SignUp() {
       </button>
       {notification && <p>{notification}</p>}
     </form>
+    </>
   );
 }
 

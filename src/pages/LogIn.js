@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useOutletContext } from "react-router-dom";
 import SignUp from "./SignUp";
+import NavBar from "../components/NavBar";
 
 function Login() {
   // Get the login function from the outlet context
@@ -49,6 +50,10 @@ function Login() {
   }
   // Render the login form and notification
   return (
+    <>
+    <header>
+      <NavBar />
+    </header>
     <div className="login-container">
       <span>
         <form className="card" onSubmit={handleLogin}>
@@ -96,11 +101,9 @@ function Login() {
         </form>
       </span>
       <span>
-        <div>
-          <SignUp />
-        </div>
       </span>
     </div>
+    </>
   );
 }
 

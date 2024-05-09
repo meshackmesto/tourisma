@@ -2,6 +2,8 @@ import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import TravelForm from './pages/TravelForm';
 import FavoriteCityDisplay from './pages/FavoriteCityDisplay';
+import Login from './pages/LogIn';
+import SignUp from './pages/SignUp';
 
 const routes =[
   {
@@ -16,6 +18,14 @@ const routes =[
     path: "/favouriteCityDisplay",
     element: <FavoriteCityDisplay />
   },
+  {
+    path:"/login",
+    element: < Login />
+  },
+  {
+    path:"/sign-up",
+    element: <SignUp />
+  }
 ];
 
 // If you want to start measuring performance in your app, pass a function
