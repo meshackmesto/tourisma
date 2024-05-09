@@ -14,6 +14,7 @@ export default function Form() {
       .catch((error) => console.error("Error fetching cities:", error));
   }, []);
 
+  console.log(cities);
   function handleSubmit(e) {
     e.preventDefault();
     console.log(`Thank you ${name}.\nYour request has been submitted.`);
@@ -47,6 +48,7 @@ export default function Form() {
           <div className="details">
             <div className="form_section">
               <div className="f_i">
+                <h2>User Details</h2>{" "}
                 <div className="input">
                   <div className="i_input">
                     <label>Title</label>
@@ -104,8 +106,8 @@ export default function Form() {
                   >
                     <option value="">Please Select</option>
                     {cities.map((city) => (
-                      <option key={city.id} value={city.name}>
-                        {city.name}
+                      <option key={city.id} value={city.city}>
+                        {city.city}
                       </option>
                     ))}
                   </select>
