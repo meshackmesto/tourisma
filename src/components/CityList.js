@@ -48,7 +48,8 @@ const CityList = () => {
       </div>
       <div className="city-list">
         {filteredCities.map(city => (
-          <CityCard key={city.id} city={city} deleteCity={deleteCity} />
+          <CityCard key={city.id} city={city} 
+          deleteCity={deleteCity} />
         ))}
       </div>
     </div>
