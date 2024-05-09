@@ -6,6 +6,7 @@ import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import TravelForm from './pages/TravelForm';
 import FavoriteCityDisplay from './pages/FavoriteCityDisplay';
+import CityList from './components/CityList';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/favouriteCityDisplay',
     element: <FavoriteCityDisplay />
+  },
+  {
+    path: '/CityList',
+    element: < CityList />
   }
 ]);
 

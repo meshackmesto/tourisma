@@ -10,15 +10,17 @@ import FavoriteCityDisplay from './FavoriteCityDisplay';
 
 function App() {
   return (
-    <div>
-      <header>
-        <NavBar />
-      </header>
+    <>   
+    <header>
+    <NavBar />
+  </header>
+    <main>
       <CityList />
       <TravelForm />
       <FavoriteCityDisplay />
-    </div>
-  )
+      </main>
+    </>
+  );
 }
 
 export default App;
