@@ -10,8 +10,6 @@ function FavoriteCity() {
       return;
     }
 
-    
-    
     console.log('Favorite city added:', favoriteCity);
 
     
