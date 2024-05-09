@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavBar from '../components/NavBar';
 
 function FavoriteCityDisplay() {
   const [favoriteCity, setFavoriteCity] = useState('');
@@ -14,6 +15,10 @@ function FavoriteCityDisplay() {
   }, []);
 
   return (
+    <>
+     <header>
+      <NavBar />
+    </header>
     <div>
       <h2>Favorite City</h2>
       {favoriteCity ? (
@@ -22,6 +27,7 @@ function FavoriteCityDisplay() {
         <p>No favorite city set yet</p>
       )}
     </div>
+    </>
   );
 }
 
