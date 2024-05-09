@@ -26,6 +26,31 @@
 }
 
 
+.searchBox{
+    display: flex;
+    align-items: center;
+    background: #242424;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+.searchBox input{
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 18px;
+    max-width: 200px;
+}
+
+.title {
+    color: #10439F;
+    margin-left: 850px;
+    
+
+}
+
 
 
 
