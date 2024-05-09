@@ -4,12 +4,17 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
+import TravelForm from './pages/TravelForm';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
   },
+  {
+    path: '/TraveForm',
+    element: <TravelForm />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
