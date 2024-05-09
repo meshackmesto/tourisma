@@ -13,14 +13,15 @@
     border-radius: 10px;
 }
 .nav-link{
-   display: inline-block;
    margin: 10px 20px;
    font-size: 18px;
    cursor: pointer;
    align-items: center;
    justify-content: space-between;
+   color: #242424;
+   text-decoration: none;
 }
-.active {
+.active:hover{
     color: rgb(107, 107, 107);
 }
 

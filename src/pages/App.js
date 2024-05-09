@@ -1,6 +1,7 @@
 import React from'react';
 import './App.css';
 import NavBar from '../components/NavBar';
+import TravelForm from './TravelForm';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header>
         <NavBar />
       </header>
+      <TravelForm />
     </div>
   )
 }
