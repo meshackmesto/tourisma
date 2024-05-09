@@ -14,9 +14,6 @@ function NavBar(){
                 <NavLink to="/favouriteCityDisplay" className="nav-link">Favorite</NavLink>
                 <NavLink to="/TravelForm" className="nav-link">Visit</NavLink>
             </nav>
-            <div className='searchBox'> 
-                <input type='text' placeholder='Search'></input>
-            </div>
         </div>
     );
 }
