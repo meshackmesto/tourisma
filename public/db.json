@@ -9,7 +9,7 @@
 {
   "id": 2,
   "city": "Paris",
-  "image": ".img/paris.jpeg",
+  "image": "./img/paris.jpeg",
   "info": "Paris is the capital city of France and is famous for its art, fashion, and culture. Landmarks include the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral."
 },
 {
@@ -27,7 +27,7 @@
 {
   "id": 5,
   "city": "Los Angeles",
-  "image": "./img/los-angeles.jpeg",
+  "image": "./img/los-angeles.jpg",
   "info": "Los Angeles, often known by its initials L.A., is the largest city in California. It is famous for its entertainment industry, beautiful beaches, and diverse population."
 },
 {
@@ -69,7 +69,7 @@
 {
   "id": 12,
   "city": "Singapore",
-  "image": "./img/singapore.jpeg",
+  "image": "./img/singapore.jpg",
   "info": "Singapore is a city-state and island country in Southeast Asia. It is known for its modern skyline, diverse food scene, and efficient public transportation."
 },
 {
@@ -129,7 +129,7 @@
   {
     "id": 22,
     "city": "Venice",
-    "image": "./img/venice.jpeg",
+    "image": "./img/venice.jpg",
     "info": "Venice is a city in northeastern Italy and is renowned for its canals, art, and architecture. Landmarks include St. Mark's Square, the Doge's Palace, and the Rialto Bridge."
   },
   {
