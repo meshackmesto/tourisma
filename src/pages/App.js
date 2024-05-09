@@ -1,7 +1,7 @@
 import React from'react';
 import './App.css';
 import NavBar from '../components/NavBar';
-import CityList from '../components/CityList.js'
+import CityList from '../src/components/CityList'
 
 function App() {
   return (
