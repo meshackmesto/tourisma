@@ -22,5 +22,24 @@ function Login() {
   // Handle form submission
   function handleLogin(e) {
     e.preventDefault();
-
+    axios
+      .get("http://localhost:8000/users")
+      .then((response) => {
+        const user = response.data.find(
+          (user) =>
+            user.username === formData.username &&
+            user.password === formData.password
+        );
+        if (user) {
+          setNotification("Success");
+          login(user);
+        } else {
+          setNotification("Incorrect username or password. Please try again.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching user details:", error);
+        setNotification("An error occurred. Please try again later.");
+      });
   }
+  
