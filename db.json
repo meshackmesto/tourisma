@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "email": "user1@example.com",
+      "password": "password1"
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "email": "user2@example.com",
+      "password": "password2"
+    },
+    {
+      "id": "3",
+      "username": "user3",
+      "email": "user3@example.com",
+      "password": "password3"
+    },
+    {
+      "id": "dc53",
+      "username": "Nick",
+      "email": "nick@gmail.com",
+      "password": "12345",
+      "confirmPassword": "12345"
+    },
+    {
+      "id": "3696",
+      "username": "Nick",
+      "email": "nick@gmail.com",
+      "password": "12345",
+      "confirmPassword": "12345"
+    },
+    {
+      "id": "9b2d",
+      "username": "nick",
+      "email": "tgrvsd@rthbf",
+      "password": "wgvd",
+      "confirmPassword": "rfgsd"
+    },
+    {
+      "id": "50f7",
+      "username": "nick",
+      "email": "ktmghjty@fgh",
+      "password": "12345",
+      "confirmPassword": "12345"
+    }
+  ]
+}
