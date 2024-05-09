@@ -1,6 +1,7 @@
-// CityCard.js
+
 import React, { useState } from 'react';
 import './CityList.css';
+
 
 const CityCard = ({ city, deleteCity }) => {
   const [rating, setRating] = useState(city.rating || 0);
@@ -35,6 +36,7 @@ const CityCard = ({ city, deleteCity }) => {
         {renderStars()}
       </div>
       <button onClick={() => deleteCity(city.id)}>Delete</button>
+      
     </div>
   );
 };

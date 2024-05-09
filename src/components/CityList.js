@@ -36,8 +36,8 @@ const CityList = () => {
   );
 
   return (
-    <div>
-      <h1>Tourista</h1>
+    <div className="intro">
+      <h1 className="tourisma">Tourisma</h1>
       <div className="search-bar">
         <input
           type="text"
