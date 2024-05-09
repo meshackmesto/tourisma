@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./form.css";
+import NavBar from '../components/NavBar';
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -9,6 +10,9 @@ export default function Form() {
   }
   return (
     <div onSubmit={handleSubmit} className="form">
+      <header>
+        <NavBar />
+      </header>
       <form className="data">
         <div className="form_header">
           <div className="form_image">
