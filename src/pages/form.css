@@ -1,150 +1,160 @@
-.data {
+/* General styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-input {
+/* Header section styles */
+.form_header {
   display: flex;
-}
-
-.f_i {
-  display: flex;
-  flex-direction: column;
-}
-
-.input {
-  display: grid;
-  grid-template-columns: 1fr 0.5fr 0.5fr;
-}
-.login-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  min-height: 98vh;
-  /* background-image: url(../../public/pexels-orlovamaria-4946702.jpg); */
-  background-size: cover;
-  background-blend-mode: lighten;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-@media screen and (max-width: 768px) {
-  .login-container {
-    flex-direction: column;
-  }
-
-  .card {
-    margin-bottom: 1rem;
-  }
-}
-.card {
-  position: relative;
-  width: 250px;
-  backdrop-filter: blur(24px);
-  background: rgba(152, 224, 221, 0.359);
-  border-radius: 15px;
-  padding: 7.5em 2.5em 4em 2.5em;
-  color: var(--second-color);
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.9);
-}
-.card-header-login {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  background: rgba(192, 10, 10, 0.253);
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 0 10px 45px;
-  font-weight: 900;
-  font-size: 35px;
-  width: 140px;
-  height: 70px;
-}
-.card-header-signup {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  background: rgba(192, 10, 10, 0.333);
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 0 45px 10px;
-  font-weight: 900;
-  font-size: 35px;
-  width: 140px;
-  height: 70px;
-}
-.card-header h2 {
-  font-size: 24px;
-  text-align: center;
+  width: 100%;
   margin-bottom: 20px;
 }
 
-form {
-  position: absolute;
-  justify-content: center;
-  align-items: center;
+.form_image {
+  width: 200px;
+  height: auto;
 }
-.card-inpt {
-  position: relative;
-  height: 30px;
-  margin-top: 40px;
+
+.header_text {
+  flex: 1;
+  text-align: center;
+}
+
+.header {
+  font-size: 2em;
   margin-bottom: 10px;
-  width: 100%;
-  border: none;
-  background: transparent;
-  border-bottom: 2px solid black;
-  font-size: 18px;
-  font-weight: 500;
-  outline: none;
-  color: black;
-  transition: all 0.3s ease-in-out;
-}
-.card-inpt:hover {
-  border-bottom: 3px solid rgb(0, 8, 168);
-}
-.card-inpt::placeholder {
-  color: rgba(7, 7, 7, 0.863);
-  font-weight: 500;
 }
 
-.card-checkbx {
-  position: relative;
+.h_text p {
+  line-height: 1.5;
+}
+
+/* Details section styles */
+.details {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-}
-.card-btn {
-  height: 50px;
-  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
-  border: none;
-  background-color: rgb(0, 76, 190);
-  color: white;
-  font-weight: 600;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 20px;
-  transition: all 0.3s ease-in-out;
 }
 
-.card-btn:hover {
-  background-color: rgba(192, 10, 10, 0.333);
-  color: rgb(5, 5, 5);
-  cursor: pointer;
+.form_section {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.notification {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
+.input {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.i_input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.i_input label {
+  display: block;
   margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-dropdown {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.t_details {
+  flex: 1.5;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.t_details header {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.selection,
+.t_details div:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+/* Checkbox styles */
+.check {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.check p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.check label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.check input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Button styles */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+img {
+  width: 800px;
+}
+
+body {
+  background-color: paleturquoise;
+}
+
+form {
+  background-color: antiquewhite;
+}
+
+.form {
+  background-color: #ddd;
+}
+#marked {
+  display: none;
+}
+#marked > * {
+  display: none;
 }
