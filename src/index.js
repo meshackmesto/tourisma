@@ -5,6 +5,7 @@ import './index.css';
 import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import TravelForm from './pages/TravelForm';
+import FavoriteCityDisplay from './pages/FavoriteCityDisplay';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/TraveForm',
     element: <TravelForm />
+  },
+  {
+    path: '/favouriteCityDisplay',
+    element: <FavoriteCityDisplay />
   }
 ]);
 
