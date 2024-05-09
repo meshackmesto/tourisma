@@ -1,9 +1,7 @@
-
 import React, { useState } from 'react';
 import './CityList.css';
 
-
-const CityCard = ({ city, deleteCity }) => {
+const CityCard = ({ city, deleteCity, addFavoriteCity }) => {
   const [rating, setRating] = useState(city.rating || 0);
 
   const handleRatingChange = (newRating) => {
@@ -36,7 +34,7 @@ const CityCard = ({ city, deleteCity }) => {
         {renderStars()}
       </div>
       <button onClick={() => deleteCity(city.id)}>Delete</button>
-      
+      <button onClick={() => addFavoriteCity(city.city)}>Add to Favorites</button>
     </div>
   );
 };
