@@ -1,19 +1,20 @@
 import React from'react';
 import './App.css';
 import NavBar from '../components/NavBar';
-main
 import CityList from '../components/CityList';
 import TravelForm from './TravelForm';
-main
+import FavoriteCityDisplay from '../FavoriteCityDisplay';
+
 
 function App() {
   return (
     <div>
       <header>
         <NavBar />
-        <CityList />
       </header>
+      <CityList />
       <TravelForm />
+      <FavoriteCityDisplay />
     </div>
   )
 }
