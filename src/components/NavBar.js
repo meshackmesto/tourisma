@@ -30,13 +30,13 @@ function NavBar(){
                 sign-up
             </NavLink>
             <NavLink 
-            to= "/favourite"
+            to= "/FavouriteCityDislpay"
             className="nav-link"
             >
                 favourite
             </NavLink>
             <NavLink 
-            to= "/visit"
+            to= "/TravelForm"
             className="nav-link"
             >
                 visit
