@@ -1,7 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
-import NavBar from "../components/NavBar";
 
 function SignUp() {
   const signup = useOutletContext();
@@ -64,69 +63,66 @@ function SignUp() {
   }
   return (
     <>
-    <header>
-      <NavBar />
-    </header>
-    <form className="card" onSubmit={handleSignUp}>
-      <div className="card-header-signup">
-        <span>Sign Up</span>
-      </div>
-      <div>
-        <input
-          className="card-inpt"
-          placeholder="Enter your username..."
-          id="username"
-          type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-          required
-        />
-      </div>
+      <form className="card" onSubmit={handleSignUp}>
+        <div className="card-header-signup">
+          <span>Sign Up</span>
+        </div>
+        <div>
+          <input
+            className="card-inpt"
+            placeholder="Enter your username..."
+            id="username"
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-      <div>
-        <input
-          className="card-inpt"
-          placeholder="Enter your email..."
-          id="email"
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
+        <div>
+          <input
+            className="card-inpt"
+            placeholder="Enter your email..."
+            id="email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-      <div>
-        <input
-          className="card-inpt"
-          placeholder="Enter password..."
-          id="password"
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-      </div>
+        <div>
+          <input
+            className="card-inpt"
+            placeholder="Enter password..."
+            id="password"
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-      <div>
-        <input
-          className="card-inpt"
-          placeholder="Confirm password..."
-          id="confirmPassword"
-          type="password"
-          name="confirmPassword"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <button className="card-btn" type="submit">
-        Create Account
-      </button>
-      {notification && <p>{notification}</p>}
-    </form>
+        <div>
+          <input
+            className="card-inpt"
+            placeholder="Confirm password..."
+            id="confirmPassword"
+            type="password"
+            name="confirmPassword"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button className="card-btn" type="submit">
+          Create Account
+        </button>
+        {notification && <p>{notification}</p>}
+      </form>
     </>
   );
 }

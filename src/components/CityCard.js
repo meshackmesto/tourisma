@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import './CityList.css';
+import React, { useState } from "react";
+import "./CityList.css";
 
 const CityCard = ({ city, deleteCity, addFavoriteCity }) => {
   const [rating, setRating] = useState(city.rating || 0);
 
+  const handleAddFavorites = () => {
+    addFavoriteCity(city);
+  };
+
   const handleRatingChange = (newRating) => {
     setRating(newRating);
-    // Here you can implement logic to save the rating to the backend or wherever it needs to be stored
   };
 
   const renderStars = () => {
@@ -15,7 +18,7 @@ const CityCard = ({ city, deleteCity, addFavoriteCity }) => {
       stars.push(
         <span
           key={i}
-          className={i <= rating ? 'star filled' : 'star'}
+          className={i <= rating ? "star filled" : "star"}
           onClick={() => handleRatingChange(i)}
         >
           ★
@@ -30,11 +33,17 @@ const CityCard = ({ city, deleteCity, addFavoriteCity }) => {
       <img src={city.image} alt={city.city} />
       <h2>{city.city}</h2>
       <p>{city.info}</p>
-      <div className="star-rating">
-        {renderStars()}
+      <div className="star-rating">{renderStars()}</div>
+      <div className="fav">
+        <span>
+          <button onClick={() => deleteCity(city.id)}>Delete</button>
+        </span>
+        <span>
+          <button onClick={() => handleAddFavorites(city.city)}>
+            Add to Favorites
+          </button>
+        </span>
       </div>
-      <button onClick={() => deleteCity(city.id)}>Delete</button>
-      <button onClick={() => addFavoriteCity(city.city)}>Add to Favorites</button>
     </div>
   );
 };
