@@ -1,35 +1,14 @@
-import React, { useState } from 'react';
+import axios from "axios";
 
-function FavoriteCity() {
-  const [favoriteCity, setFavoriteCity] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleAddFavorite = () => {
-    if (favoriteCity.trim() === '') {
-      setMessage('Please enter a city name');
-      return;
-    }
-
-    console.log('Favorite city added:', favoriteCity);
-
-    
-    setFavoriteCity('');
-    setMessage('Favorite city added successfully');
-  };
-
-  return (
-    <div>
-      <h2>Add Favorite City</h2>
-      <input
-        type="text"
-        placeholder="Enter city name"
-        value={favoriteCity}
-        onChange={(e) => setFavoriteCity(e.target.value)}
-      />
-      <button onClick={handleAddFavorite}>Add Favorite</button>
-      {message && <p>{message}</p>}
-    </div>
-  );
-}
-
-export default FavoriteCity;
+const getFavoriteCities = async () => {
+  try {
+    const response = await axios.get("http://localhost:8000/favoriteCities");
+    const data = response.data;
+    const favoriteCities = data.favoriteCities;
+    return favoriteCities;
+  } catch (error) {
+    console.error("Error fetching favorite cities:", error);
+    return [];
+  }
+};
+export default getFavoriteCities;

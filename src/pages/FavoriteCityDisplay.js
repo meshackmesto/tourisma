@@ -1,33 +1,43 @@
-import React, { useState } from 'react';
-import NavBar from '../components/NavBar';
+import React, { useState, useEffect } from "react";
+import getFavoriteCities from "../FavoriteCity";
 
 function FavoriteCityDisplay() {
-  const [favoriteCity, setFavoriteCity] = useState('');
+  const [favoriteCities, setFavoriteCities] = useState([]);
 
-  
-  const fetchFavoriteCity = () => {
-    const storedFavoriteCity = ''; 
-    setFavoriteCity(storedFavoriteCity);
-  };
+  useEffect(() => {
+    const fetchFavoriteCities = async () => {
+      const cities = await getFavoriteCities();
+      setFavoriteCities(cities);
+    };
 
-  useState(() => {
-    fetchFavoriteCity();
+    fetchFavoriteCities();
   }, []);
 
+  const removeFromFavorites = (cityId) => {
+    const updatedFavorites = favoriteCities.filter(
+      (city) => city.id !== cityId
+    );
+    setFavoriteCities(updatedFavorites);
+  };
+
   return (
-    <>
-     <header>
-      <NavBar />
-    </header>
     <div>
-      <h2>Favorite City</h2>
-      {favoriteCity ? (
-        <p>Your favorite city is: {favoriteCity}</p>
+      <h2>Favorite Cities</h2>
+      {favoriteCities && favoriteCities.length > 0 ? (
+        <ul>
+          {favoriteCities.map((city) => (
+            <li key={city.id}>
+              {city.name}
+              <button onClick={() => removeFromFavorites(city.id)}>
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
       ) : (
-        <p>No favorite city set yet</p>
+        <p>No favorite cities found.</p>
       )}
     </div>
-    </>
   );
 }
 
